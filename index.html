@@ -497,15 +497,15 @@
               <!-- 轮播项 1 -->
               <div class="item">
                 <img src="static/images/LTurn_Comp_Traj.png" alt="Predictive control indoor tracking" loading="lazy"/>
-                <p class="subtitle is-3 has-text-centered" style="margin-top: 1rem;">
-                  L-Turn Trajectories.
+                <p class="subtitle is-4 has-text-centered" style="margin-top: 1rem;">
+                  L-Turn(45°) Trajectories.
                 </p>
               </div>
               <!-- 轮播项 2 -->
               <div class="item">
                 <img src="static/images/LTurn_Comp_IBVS.png" alt="Predictive control outdoor scenario" loading="lazy"/>
-                <p class="subtitle is-3 has-text-centered" style="margin-top: 1rem;">
-                  L-Turn Metrics.
+                <p class="subtitle is-4 has-text-centered" style="margin-top: 1rem;">
+                  L-Turn(45°) Metrics.
                 </p>
               </div>
             </div>
@@ -517,24 +517,26 @@
               <!-- 轮播项 1 -->
               <div class="item">
                 <img src="static/images/UTurn_Comp_Traj.png" alt="Non-predictive control indoor tracking" loading="lazy"/>
-                <p class="subtitle is-6 has-text-centered" style="margin-top: 1rem;">
+                <p class="subtitle is-4 has-text-centered" style="margin-top: 1rem;">
                   U-Turn Trajectories.
                 </p>
               </div>
               <!-- 轮播项 2 -->
               <div class="item">
                 <img src="static/images/UTurn_Comp_IBVS.png" alt="Non-predictive control outdoor scenario" loading="lazy"/>
-                <p class="subtitle is-6 has-text-centered" style="margin-top: 1rem;">
+                <p class="subtitle is-4 has-text-centered" style="margin-top: 1rem;">
                   U-Turn Metrics.
                 </p>
               </div>
             </div>
           </div>
           <!-- 双图下方的总描述 -->
-          <div class="has-text-centered" style="margin-top: 2rem;">
-            <p class="subtitle is-5" style="line-height: 1.6; max-width: 90%; margin: 0 auto;">
-              <strong>Real-world deployment validation of OP-Follower in diverse environments.</strong> The system demonstrates robust performance in both constrained indoor spaces and challenging outdoor scenarios, maintaining stable person following while effectively avoiding obstacles under real-world conditions.
-            </p>
+          <div class="column is-12">
+            <div class="has-text-centered" style="margin-top: 2rem;">
+              <p class="subtitle is-5" style="line-height: 1.6; max-width: 90%; margin: 0 auto;">
+                <strong>Performance of the full OP-Follower against a non-predictive baseline.</strong>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -543,34 +545,26 @@
     <!-- === 双图平铺展示部分 === -->
     <div class="columns is-centered" style="margin-top: 4rem;">
       <div class="column is-full">
-        <!-- 双图部分小标题 -->
-        <h3 class="title is-4 has-text-left">Real-world Deployment Scenarios</h3>
         
         <!-- 双图容器 -->
         <div class="columns is-multiline">
           <!-- 左侧图片 -->
           <div class="column is-6">
-            <div class="image-tile">
-              <img src="static/images/realworld1.jpg" 
+            <div class="image-tile" style="text-align: center;">
+              <img src="static/images/BoxPlot_u.png" 
                    alt="Indoor deployment scenario" 
-                   style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-              <h4 class="title is-5 has-text-centered" style="margin-top: 1rem;">Indoor Environment Deployment</h4>
-              <p class="subtitle is-6 has-text-centered" style="margin-top: 0.5rem; line-height: 1.4;">
-                OP-Follower operating in indoor office environments with multiple obstacles and dynamic human movements.
-              </p>
+                   style="width: 95%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+              <h4 class="title is-5 has-text-centered" style="margin-top: 1rem;">Pixel Error (u)</h4>
             </div>
           </div>
           
           <!-- 右侧图片 -->
-          <div class="column is-6">
+          <div class="column is-6" style="text-align: center;">
             <div class="image-tile">
-              <img src="static/images/realworld2.jpg" 
+              <img src="static/images/BoxPlot_z.png" 
                    alt="Outdoor deployment scenario" 
-                   style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-              <h4 class="title is-5 has-text-centered" style="margin-top: 1rem;">Outdoor Environment Deployment</h4>
-              <p class="subtitle is-6 has-text-centered" style="margin-top: 0.5rem; line-height: 1.4;">
-                OP-Follower performance in outdoor campus environments with varying lighting conditions and complex terrains.
-              </p>
+                   style="width: 95%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+              <h4 class="title is-5 has-text-centered" style="margin-top: 1rem;">Distance Error (Z<sub>c</sub>)</h4>
             </div>
           </div>
         </div>
@@ -578,68 +572,60 @@
         <!-- 双图下方的总描述 -->
         <div class="has-text-centered" style="margin-top: 2rem;">
           <p class="subtitle is-5" style="line-height: 1.6; max-width: 90%; margin: 0 auto;">
-            <strong>Real-world deployment validation of OP-Follower in diverse environments.</strong> The system demonstrates robust performance in both constrained indoor spaces and challenging outdoor scenarios, maintaining stable person following while effectively avoiding obstacles under real-world conditions.
+            <strong>Box Plots of Tracking Errors for Full and Non-Predictive OP-Follower.</strong>
           </p>
         </div>
       </div>
     </div>
 
-    <!-- === 表格展示部分 === -->
-    <div class="columns is-centered" style="margin-top: 4rem;">
-      <div class="column is-four-fifths">
-        <!-- 表格容器 -->
-        <div class="table-container" style="margin-top: 1.5rem;">
-          <table class="table is-bordered is-striped is-hoverable" style="width: 100%;">
-            <caption style="caption-side: top; text-align: center; padding: 1rem; font-weight: bold; font-size: 1.1rem;">
-              TABLE: Error comparison of Full OP-Follower and N.Pre OP-Follower on U-turn and L-turn (45°) trajectories.
-            </caption>
-            <thead>
-              <tr style="background-color: #e3f2fd;">
-                <th rowspan="2" style="text-align: center; vertical-align: middle;">RMSE</th>
-                <th colspan="2" style="text-align: center;">u (pixels)</th>
-                <th colspan="2" style="text-align: center;">Z<sub>c</sub> (meters)</th>
-              </tr>
-              <tr style="background-color: #e3f2fd;">
-                <th style="text-align: center;">L-Turn</th>
-                <th style="text-align: center;">U-Turn</th>
-                <th style="text-align: center;">L-Turn</th>
-                <th style="text-align: center;">U-Turn</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="font-weight: bold; text-align: left;">N.Pre OP-Follower</td>
-                <td style="text-align: center;">30.9611</td>
-                <td style="text-align: center;">27.6651</td>
-                <td style="text-align: center;">0.1888</td>
-                <td style="text-align: center;">0.1955</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; text-align: left;">Full OP-Follower</td>
-                <td style="text-align: center;">13.2460</td>
-                <td style="text-align: center;">15.6693</td>
-                <td style="text-align: center;">0.0935</td>
-                <td style="text-align: center;">0.1126</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="5" style="text-align: left; padding: 1rem; font-size: 0.9rem; color: #666;">
-                  Note: Full OP-Follower demonstrates significant improvement over N.Pre OP-Follower across all metrics,<strong>with error reductions of 57.2% (L-Turn, u) and 43.4% (U-Turn, u) in pixel error, and 50.5% (L-Turn, Z<sub>c</sub>) and 42.4% (U-Turn, Z<sub>c</sub>) in depth error.</strong> 
-                </td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-        
-        <!-- 表格描述文字 -->
-        <p class="subtitle is-6 has-text-justified" style="margin-top: 1rem; line-height: 1.5;">
-          Quantitative comparison of tracking errors between Full OP-Follower and non-predictive OP-Follower (N.Pre OP-Follower) on L-turn and U-turn trajectories. The Full OP-Follower shows significantly lower errors in both pixel space (u) and depth estimation (Z<sub>c</sub>), demonstrating the effectiveness of the predictive tracking module.
-        </p>
-      </div>
+<!-- === 表格展示部分 === -->
+<div class="columns is-centered" style="margin-top: 4rem;">
+  <div class="column is-four-fifths">
+    <!-- 表格容器 - 添加字体大小类 -->
+    <div class="table-container is-size-6" style="margin-top: 1.5rem;">
+      <table class="table is-bordered is-striped is-hoverable" style="width: 100%;">
+        <caption style="caption-side: top; text-align: center; padding: 1rem; font-weight: bold; font-size: 1.25rem;" class="is-size-5">
+          TABLE: Error RMSE comparison of Full OP-Follower and N.Pre OP-Follower on U-turn and L-turn (45°) trajectories.
+        </caption>
+        <thead>
+          <tr style="background-color: #eeeeee86;">
+            <th rowspan="2" style="text-align: center; vertical-align: middle;" class="is-size-6">RMSE</th>
+            <th colspan="2" style="text-align: center;" class="is-size-6">u (pixels)</th>
+            <th colspan="2" style="text-align: center;" class="is-size-6">Z<sub>c</sub> (meters)</th>
+          </tr>
+          <tr style="background-color: #eeeeee86;">
+            <th style="text-align: center;" class="is-size-6">L-Turn</th>
+            <th style="text-align: center;" class="is-size-6">U-Turn</th>
+            <th style="text-align: center;" class="is-size-6">L-Turn</th>
+            <th style="text-align: center;" class="is-size-6">U-Turn</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight: bold; text-align: center;" class="is-size-6">N.Pre OP-Follower</td>
+            <td style="text-align: center;" class="is-size-6">30.9611</td>
+            <td style="text-align: center;" class="is-size-6">27.6651</td>
+            <td style="text-align: center;" class="is-size-6">0.1888</td>
+            <td style="text-align: center;" class="is-size-6">0.1955</td>
+          </tr>
+
+          <tr style="background-color: #ffffff;">
+            <td style="font-weight: bold; text-align: center; color: #0400ff;" class="is-size-6">Full OP-Follower</td>
+            <td style="text-align: center; color: #0400ff;" class="is-size-6">13.2460</td>
+            <td style="text-align: center; color: #0400ff;" class="is-size-6">15.6693</td>
+            <td style="text-align: center; color: #0400ff;" class="is-size-6">0.0935</td>
+            <td style="text-align: center; color: #0400ff;" class="is-size-6">0.1126</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+    
+    <!-- 表格描述文字 - 保持原有大小 -->
+    <p class="subtitle is-5 has-text-justified" style="margin-top: 1rem; line-height: 1.5;">
+      Full OP-Follower demonstrates significant improvement over N.Pre OP-Follower across all metrics, with <strong>error reductions of 57.2% (L-Turn, u) and 43.4% (U-Turn, u) in pixel error, and 50.5% (L-Turn, Z<sub>c</sub>) and 42.4% (U-Turn, Z<sub>c</sub>) in depth error.</strong> 
+    </p>
   </div>
-</section>
+</div>
 
 
 
