@@ -483,38 +483,107 @@
 
     
 
-    <!-- === 多张图片轮播部分 === -->
+    <!-- === 双轮播容器部分 === -->
     <div class="columns is-centered" style="margin-top: 4rem;">
       <div class="column is-full">
         <!-- 轮播部分小标题 -->
         <h3 class="title is-4 has-text-left">Predictive vs. Non-Predictive Control Comparisons</h3>
         
-        <!-- 轮播容器 -->
-        <div id="results-carousel" class="carousel results-carousel">
-          <!-- 轮播项 1 -->
-          <div class="item">
-            <img src="static/images/carousel1.jpg" alt="室内环境跟踪效果" loading="lazy"/>
-            <p class="subtitle is-6 has-text-centered" style="margin-top: 1rem;">
-              图2：室内狭窄环境下的行人跟踪效果。机器人能够有效避障并保持稳定的跟随距离。
-            </p>
+        <!-- 双轮播容器 -->
+        <div class="columns is-multiline">
+          <!-- 左侧轮播 -->
+          <div class="column is-6">
+            <div id="carousel-left" class="carousel results-carousel">
+              <!-- 轮播项 1 -->
+              <div class="item">
+                <img src="static/images/LTurn_Comp_Traj.png" alt="Predictive control indoor tracking" loading="lazy"/>
+                <p class="subtitle is-3 has-text-centered" style="margin-top: 1rem;">
+                  L-Turn Trajectories.
+                </p>
+              </div>
+              <!-- 轮播项 2 -->
+              <div class="item">
+                <img src="static/images/LTurn_Comp_IBVS.png" alt="Predictive control outdoor scenario" loading="lazy"/>
+                <p class="subtitle is-3 has-text-centered" style="margin-top: 1rem;">
+                  L-Turn Metrics.
+                </p>
+              </div>
+            </div>
           </div>
-          <!-- 轮播项 2 -->
-          <div class="item">
-            <img src="static/images/carousel2.jpg" alt="室外动态场景" loading="lazy"/>
-            <p class="subtitle is-6 has-text-centered" style="margin-top: 1rem;">
-              图3：室外复杂场景下的动态避障表现。即使在光线变化条件下也能保持鲁棒性。
-            </p>
+          
+          <!-- 右侧轮播 -->
+          <div class="column is-6">
+            <div id="carousel-right" class="carousel results-carousel">
+              <!-- 轮播项 1 -->
+              <div class="item">
+                <img src="static/images/UTurn_Comp_Traj.png" alt="Non-predictive control indoor tracking" loading="lazy"/>
+                <p class="subtitle is-6 has-text-centered" style="margin-top: 1rem;">
+                  U-Turn Trajectories.
+                </p>
+              </div>
+              <!-- 轮播项 2 -->
+              <div class="item">
+                <img src="static/images/UTurn_Comp_IBVS.png" alt="Non-predictive control outdoor scenario" loading="lazy"/>
+                <p class="subtitle is-6 has-text-centered" style="margin-top: 1rem;">
+                  U-Turn Metrics.
+                </p>
+              </div>
+            </div>
           </div>
-          <!-- 轮播项 3 -->
-          <div class="item">
-            <img src="static/images/carousel3.jpg" alt="多人物跟踪" loading="lazy"/>
-            <p class="subtitle is-6 has-text-centered" style="margin-top: 1rem;">
-              图4：多人物场景下的目标识别与跟踪。系统能够准确识别特定目标并忽略干扰项。
+          <!-- 双图下方的总描述 -->
+          <div class="has-text-centered" style="margin-top: 2rem;">
+            <p class="subtitle is-5" style="line-height: 1.6; max-width: 90%; margin: 0 auto;">
+              <strong>Real-world deployment validation of OP-Follower in diverse environments.</strong> The system demonstrates robust performance in both constrained indoor spaces and challenging outdoor scenarios, maintaining stable person following while effectively avoiding obstacles under real-world conditions.
             </p>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- === 双图平铺展示部分 === -->
+    <div class="columns is-centered" style="margin-top: 4rem;">
+      <div class="column is-full">
+        <!-- 双图部分小标题 -->
+        <h3 class="title is-4 has-text-left">Real-world Deployment Scenarios</h3>
+        
+        <!-- 双图容器 -->
+        <div class="columns is-multiline">
+          <!-- 左侧图片 -->
+          <div class="column is-6">
+            <div class="image-tile">
+              <img src="static/images/realworld1.jpg" 
+                   alt="Indoor deployment scenario" 
+                   style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <h4 class="title is-5 has-text-centered" style="margin-top: 1rem;">Indoor Environment Deployment</h4>
+              <p class="subtitle is-6 has-text-centered" style="margin-top: 0.5rem; line-height: 1.4;">
+                OP-Follower operating in indoor office environments with multiple obstacles and dynamic human movements.
+              </p>
+            </div>
+          </div>
+          
+          <!-- 右侧图片 -->
+          <div class="column is-6">
+            <div class="image-tile">
+              <img src="static/images/realworld2.jpg" 
+                   alt="Outdoor deployment scenario" 
+                   style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <h4 class="title is-5 has-text-centered" style="margin-top: 1rem;">Outdoor Environment Deployment</h4>
+              <p class="subtitle is-6 has-text-centered" style="margin-top: 0.5rem; line-height: 1.4;">
+                OP-Follower performance in outdoor campus environments with varying lighting conditions and complex terrains.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 双图下方的总描述 -->
+        <div class="has-text-centered" style="margin-top: 2rem;">
+          <p class="subtitle is-5" style="line-height: 1.6; max-width: 90%; margin: 0 auto;">
+            <strong>Real-world deployment validation of OP-Follower in diverse environments.</strong> The system demonstrates robust performance in both constrained indoor spaces and challenging outdoor scenarios, maintaining stable person following while effectively avoiding obstacles under real-world conditions.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <!-- === 表格展示部分 === -->
     <div class="columns is-centered" style="margin-top: 4rem;">
       <div class="column is-four-fifths">
