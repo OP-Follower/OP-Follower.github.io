@@ -629,38 +629,105 @@
 
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
+<!-- 多媒体展示区域 -->
+<section class="section hero is-light" id="multimedia-showcase" style="padding: 3rem 1.5rem;">
+  <div class="container">
+
+    <!-- 第一部分：单张图片展示 -->
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Real-World Experiments</h2>
+        <div class="single-image-container has-text-centered">
+          <img src="static/images/experiments.png" 
+               alt="OP-Follower系统框架图" 
+               style="max-width: 85%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+        <div class="has-text-centered" style="margin-top: 1.5rem;">
+          <p class="subtitle is-5">
+            Real-world qualitative results of OP-Follower. Scenarios are designed to validate algorithm robustness under dynamic conditions such as intermittent occlusions, varying lighting, and frequent human-robot interactions.
+          </p>
         </div>
       </div>
     </div>
+
+    <!-- 第二部分：轮播视频展示 -->
+    <div class="columns is-centered" style="margin-top: 4rem;">
+      <div class="column is-full">        
+        <!-- 轮播容器 -->
+        <div class="video-carousel-container">
+          <!-- 轮播项目 -->
+          <div class="carousel-item is-active">
+            <div class="video-wrapper">
+              <video poster="static/videos/poster-indoor.jpg" controls muted loop height="100%" preload="metadata" style="width: 100%; border-radius: 6px;">
+                <source src="static/videos/Long-Distance Following.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-caption has-text-centered" style="margin-top: 1.5rem;">
+              <p class="title is-4">室内复杂环境跟踪</p>
+              <p class="subtitle is-6">演示机器人在充满障碍物的室内环境中稳定跟踪目标人员的能力。</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="video-wrapper">
+              <video poster="static/videos/poster-outdoor.jpg" controls muted loop height="100%" preload="metadata" style="width: 100%; border-radius: 6px;">
+                <source src="static/videos/Obstacle Avoidance.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-caption has-text-centered" style="margin-top: 1.5rem;">
+              <p class="title is-4">室外动态避障</p>
+              <p class="subtitle is-6">展示在室外场景下，机器人应对动态行人干扰和静态障碍物的性能。</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="video-wrapper">
+              <video poster="static/videos/poster-outdoor.jpg" controls muted loop height="100%" preload="metadata" style="width: 100%; border-radius: 6px;">
+                <source src="static/videos/Persuit-Evader Game.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-caption has-text-centered" style="margin-top: 1.5rem;">
+              <p class="title is-4">室外动态避障</p>
+              <p class="subtitle is-6">展示在室外场景下，机器人应对动态行人干扰和静态障碍物的性能。</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="video-wrapper">
+              <video poster="static/videos/poster-comparison.jpg" controls muted loop height="100%" preload="metadata" style="width: 100%; border-radius: 6px;">
+                <source src="static/videos/Multiperson Following.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-caption has-text-centered" style="margin-top: 1.5rem;">
+              <p class="title is-4">方法对比</p>
+              <p class="subtitle is-6">对比OP-Follower与基线方法在急转弯场景下的跟踪效果。</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 轮播导航 -->
+        <div class="carousel-navigation has-text-centered" style="margin-top: 2.5rem;">
+          <button class="button carousel-prev is-dark is-outlined" style="margin-right: 10px;">
+            <span class="icon">
+              <i class="fas fa-chevron-left"></i>
+            </span>
+            <span>上一个</span>
+          </button>
+          <span class="carousel-indicator tag is-dark" style="margin: 0 15px; font-size: 0.9rem;">1 / 3</span>
+          <button class="button carousel-next is-dark is-outlined" style="margin-left: 10px;">
+            <span>下一个</span>
+            <span class="icon">
+              <i class="fas fa-chevron-right"></i>
+            </span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+    
   </div>
 </section>
-<!-- End video carousel -->
+
 
 
 
