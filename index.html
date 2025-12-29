@@ -354,67 +354,71 @@
 </section>
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<!-- 图片展示专区 -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- 大标题 -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">核心图表展示</h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
 
+    <!-- === 单张图片展示部分 === -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <!-- 小标题 (上方左侧) -->
+        <h3 class="title is-4 has-text-left">系统框架总览</h3>
+        
+        <!-- 图片容器 -->
+        <div class="has-text-centered" style="margin: 1.5rem 0;">
+          <img src="static/images/architecture.jpg" 
+               alt="OP-Follower 系统架构图" 
+               style="max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        </div>
+        
+        <!-- 图片下方描述文字 -->
+        <p class="subtitle is-6 has-text-centered" style="margin-top: 1rem; line-height: 1.5;">
+          图1：OP-Follower 整体系统架构。展示了从视觉感知、预测跟踪到NMPC控制的完整闭环流程，包括YOLO-World检测、Kalman滤波预测以及IBVS-NMPC控制器集成。
+        </p>
+      </div>
+    </div>
 
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <!-- === 多张图片轮播部分 === -->
+    <div class="columns is-centered" style="margin-top: 3rem;">
+      <div class="column is-four-fifths">
+        <!-- 轮播部分小标题 -->
+        <h3 class="title is-4 has-text-left">实验效果对比</h3>
+        
+        <!-- 轮播容器 -->
+        <div id="results-carousel" class="carousel results-carousel">
+          <!-- 轮播项 1 -->
+          <div class="item">
+            <img src="static/images/carousel1.jpg" alt="室内环境跟踪效果" loading="lazy"/>
+            <p class="subtitle is-6 has-text-centered" style="margin-top: 1rem;">
+              图2：室内狭窄环境下的行人跟踪效果。机器人能够有效避障并保持稳定的跟随距离。
+            </p>
+          </div>
+          <!-- 轮播项 2 -->
+          <div class="item">
+            <img src="static/images/carousel2.jpg" alt="室外动态场景" loading="lazy"/>
+            <p class="subtitle is-6 has-text-centered" style="margin-top: 1rem;">
+              图3：室外复杂场景下的动态避障表现。即使在光线变化条件下也能保持鲁棒性。
+            </p>
+          </div>
+          <!-- 轮播项 3 -->
+          <div class="item">
+            <img src="static/images/carousel3.jpg" alt="多人物跟踪" loading="lazy"/>
+            <p class="subtitle is-6 has-text-centered" style="margin-top: 1rem;">
+              图4：多人物场景下的目标识别与跟踪。系统能够准确识别特定目标并忽略干扰项。
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+
 
 
 <!-- Video carousel -->
@@ -451,47 +455,6 @@
 <!-- End video carousel -->
 
 
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
 
 
   <footer class="footer">
