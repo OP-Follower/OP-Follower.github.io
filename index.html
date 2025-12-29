@@ -364,29 +364,128 @@
       </div>
     </div>
 
-    <!-- === 单张图片展示部分 === -->
+    <!-- === 多张图片平铺展示部分 === -->
     <div class="columns is-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full">
         <!-- 小标题 (上方左侧) -->
-        <h3 class="title is-4 has-text-left">Robust Tracking Performance Across Diverse Trajectories:</h3>
+        <h3 class="title is-4 has-text-left" style="margin-bottom: 2rem;">Robust Tracking Performance Across Diverse Trajectories:</h3>
         
-        <!-- 图片容器 -->
-        <div class="has-text-centered" style="margin: 1.5rem 0;">
-          <img src="static/images/test.png" 
-               alt="OP-Follower 系统架构图" 
-               style="max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <!-- 第一行图片 -->
+        <div class="columns is-multiline">
+          <!-- 图片1 -->
+          <div class="column is-3">
+            <div class="image-tile">
+              <img src="static/images/Circle_Traj.png" 
+                   alt="L-turn trajectory tracking" 
+                   style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <p class="subtitle is-6 has-text-centered" style="margin-top: 0.5rem; line-height: 1.4;">
+                (a) Circle Traj.
+              </p>
+            </div>
+          </div>
+          
+          <!-- 图片2 -->
+          <div class="column is-3">
+            <div class="image-tile">
+              <img src="static/images/Fig8_Traj.png" 
+                   alt="U-turn trajectory tracking" 
+                   style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <p class="subtitle is-6 has-text-centered" style="margin-top: 0.5rem; line-height: 1.4;">
+                (b) Lemniscate Traj.
+              </p>
+            </div>
+          </div>
+          
+          <!-- 图片3 -->
+          <div class="column is-3">
+            <div class="image-tile">
+              <img src="static/images/Rectangle_Traj.png" 
+                   alt="Straight line tracking" 
+                   style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <p class="subtitle is-6 has-text-centered" style="margin-top: 0.5rem; line-height: 1.4;">
+                (c) Rectangle Traj.
+              </p>
+            </div>
+          </div>
+          
+          <!-- 图片4 -->
+          <div class="column is-3">
+            <div class="image-tile">
+              <img src="static/images/TwoTriangles_Traj.png" 
+                   alt="Oscillating trajectory tracking" 
+                   style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <p class="subtitle is-6 has-text-centered" style="margin-top: 0.5rem; line-height: 1.4;">
+                (d) Double-Triangular Traj.
+              </p>
+            </div>
+          </div>
         </div>
         
-        <!-- 图片下方描述文字 -->
-        <p class="subtitle is-6 has-text-centered" style="margin-top: 1rem; line-height: 1.5;">
-          图1：OP-Follower 整体系统架构。展示了从视觉感知、预测跟踪到NMPC控制的完整闭环流程，包括YOLO-World检测、Kalman滤波预测以及IBVS-NMPC控制器集成。
-        </p>
+        <!-- 第二行图片 -->
+        <div class="columns is-multiline" style="margin-top: 1.5rem;">
+          <!-- 图片5 -->
+          <div class="column is-3">
+            <div class="image-tile">
+              <img src="static/images/Circle_IBVS.png" 
+                   alt="Multiple obstacle avoidance" 
+                   style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <p class="subtitle is-6 has-text-centered" style="margin-top: 0.5rem; line-height: 1.4;">
+                (e) Circle Met.
+              </p>
+            </div>
+          </div>
+          
+          <!-- 图片6 -->
+          <div class="column is-3">
+            <div class="image-tile">
+              <img src="static/images/Fig8_IBVS.png" 
+                   alt="Person detection and tracking" 
+                   style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <p class="subtitle is-6 has-text-centered" style="margin-top: 0.5rem; line-height: 1.4;">
+                (f) Lemniscate Met.
+              </p>
+            </div>
+          </div>
+          
+          <!-- 图片7 -->
+          <div class="column is-3">
+            <div class="image-tile">
+              <img src="static/images/Rectangle_IBVS.png" 
+                   alt="Trajectory comparison" 
+                   style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <p class="subtitle is-6 has-text-centered" style="margin-top: 0.5rem; line-height: 1.4;">
+                (g) Rectangle Met.
+              </p>
+            </div>
+          </div>
+          
+          <!-- 图片8 -->
+          <div class="column is-3">
+            <div class="image-tile">
+              <img src="static/images/TwoTriangles_IBVS.png" 
+                   alt="Control input visualization" 
+                   style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <p class="subtitle is-6 has-text-centered" style="margin-top: 0.5rem; line-height: 1.4;">
+                (h) Double-Triangular Met.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 两行图片下方的总描述 -->
+        <div class="has-text-centered" style="margin-top: 2rem;">
+          <p class="subtitle is-5" style="line-height: 1.6; max-width: 90%; margin: 0 auto;">
+            <strong> Simulation comparison of OP-Follower tracking performance under different trajectories.</strong> Subfigures (a)-(d) depict the trajectories of the target person (red line) and the quadruped robot (blue line), with green and red markers denoting their respective start and end points. subfigures (e)-(h) present the corresponding performance metrics, where the red dashed lines indicate the reference values: the image center at u-coordinate of 464, and the desired following distance of 2 m.
+          </p>
+        </div>
       </div>
     </div>
 
+    
+
     <!-- === 多张图片轮播部分 === -->
-    <div class="columns is-centered" style="margin-top: 3rem;">
-      <div class="column is-four-fifths">
+    <div class="columns is-centered" style="margin-top: 4rem;">
+      <div class="column is-full">
         <!-- 轮播部分小标题 -->
         <h3 class="title is-4 has-text-left">Predictive vs. Non-Predictive Control Comparisons</h3>
         
@@ -414,6 +513,60 @@
             </p>
           </div>
         </div>
+      </div>
+    </div>
+    <!-- === 表格展示部分 === -->
+    <div class="columns is-centered" style="margin-top: 4rem;">
+      <div class="column is-four-fifths">
+        <!-- 表格容器 -->
+        <div class="table-container" style="margin-top: 1.5rem;">
+          <table class="table is-bordered is-striped is-hoverable" style="width: 100%;">
+            <caption style="caption-side: top; text-align: center; padding: 1rem; font-weight: bold; font-size: 1.1rem;">
+              TABLE: Error comparison of Full OP-Follower and N.Pre OP-Follower on U-turn and L-turn (45°) trajectories.
+            </caption>
+            <thead>
+              <tr style="background-color: #e3f2fd;">
+                <th rowspan="2" style="text-align: center; vertical-align: middle;">RMSE</th>
+                <th colspan="2" style="text-align: center;">u (pixels)</th>
+                <th colspan="2" style="text-align: center;">Z<sub>c</sub> (meters)</th>
+              </tr>
+              <tr style="background-color: #e3f2fd;">
+                <th style="text-align: center;">L-Turn</th>
+                <th style="text-align: center;">U-Turn</th>
+                <th style="text-align: center;">L-Turn</th>
+                <th style="text-align: center;">U-Turn</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight: bold; text-align: left;">N.Pre OP-Follower</td>
+                <td style="text-align: center;">30.9611</td>
+                <td style="text-align: center;">27.6651</td>
+                <td style="text-align: center;">0.1888</td>
+                <td style="text-align: center;">0.1955</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold; text-align: left;">Full OP-Follower</td>
+                <td style="text-align: center;">13.2460</td>
+                <td style="text-align: center;">15.6693</td>
+                <td style="text-align: center;">0.0935</td>
+                <td style="text-align: center;">0.1126</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5" style="text-align: left; padding: 1rem; font-size: 0.9rem; color: #666;">
+                  Note: Full OP-Follower demonstrates significant improvement over N.Pre OP-Follower across all metrics,<strong>with error reductions of 57.2% (L-Turn, u) and 43.4% (U-Turn, u) in pixel error, and 50.5% (L-Turn, Z<sub>c</sub>) and 42.4% (U-Turn, Z<sub>c</sub>) in depth error.</strong> 
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        
+        <!-- 表格描述文字 -->
+        <p class="subtitle is-6 has-text-justified" style="margin-top: 1rem; line-height: 1.5;">
+          Quantitative comparison of tracking errors between Full OP-Follower and non-predictive OP-Follower (N.Pre OP-Follower) on L-turn and U-turn trajectories. The Full OP-Follower shows significantly lower errors in both pixel space (u) and depth estimation (Z<sub>c</sub>), demonstrating the effectiveness of the predictive tracking module.
+        </p>
       </div>
     </div>
   </div>
