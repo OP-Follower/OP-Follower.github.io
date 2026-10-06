@@ -151,6 +151,15 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.publication-venue-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
 .publication-venue {
     color: var(--text-secondary);
     width: fit-content;
@@ -158,8 +167,12 @@ body {
     background: var(--background-accent);
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
-    margin-top: 1rem;
+    margin-top: 0;
     display: inline-block;
+}
+
+.publication-venue-row .link-block a {
+    margin: 0;
 }
 
 .publication-awards {
@@ -689,10 +702,19 @@ code {
     display: block;
     margin-bottom: 0.5rem;
   }
+
+  .publication-venue-row .link-block {
+    display: inline-flex;
+    margin-bottom: 0;
+  }
   
   .button {
     width: 100%;
     justify-content: center;
+  }
+
+  .publication-venue-row .button {
+    width: auto;
   }
 }
 
